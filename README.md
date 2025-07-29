@@ -14,6 +14,22 @@ Encoded categorical variables for modeling (e.g., sex, orientation, education).
 
 Filtered income and height for reasonable ranges.
 
+📁 Suggested GitHub Structure
+-Clustering-Analysis-of-OKCupid-Profiles/
+│
+├── uncovering_dating_archetypes_clustering_okcupid_profiles_using_umap_and_kmeans.py  # Main Python script
+├── README.md                                  # Project overview and analysis summary
+│
+├── Age distribution.png
+├── Age distribution per gender.png
+├── Body type distribution.png
+├── Drinking frequency by sexual orientation.png
+├── Education level distribution.png
+├── Income distribution.png
+├── Median income by education levels.png
+📝 README.md Highlights
+
+
 📊 Exploratory Data Analysis (EDA)
 Distributions: Age, income, education, and body type distributions reveal majority trends.
 
@@ -43,28 +59,21 @@ Highly educated
 
 Very low income
 
-Balanced gender mix
-🔍 Cluster Insights
-Cluster	Avg Age	Income	Education	Smokes	Drinks	Sex Mix
-1	32	$1,147	High	Moderate	Moderate	Mixed
-2	29	$1M	High	High	Moderate	Slight Male Bias
-0,3,4	33–36	$48K–$310K	Varied	Varied	Moderate	Mixed
 
 Cluster 1 dominates the dataset — likely students, early-career professionals, or underpaid but educated individuals. Clusters 0,2,3,4 are more niche.
 
-ools Used
 
-Python (pandas, seaborn, matplotlib, scikit-learn, UMAP)
 
-Jupyter Notebook / Google Colab
+📌 Ideas to Extend
+Add NLP sentiment analysis on essays if re-included
 
-✅ Next Steps
+Predict matching compatibility using classification
 
-Add interactivity with Streamlit (e.g. cluster explorer)
+Use UMAP+HDBSCAN for more organic clusters
 
+Build a Streamlit app to explore profiles interactively
 Expand clustering with more psychological/lifestyle variables (e.g. sign, drugs, speaks)
 
 Refine clustering with DBSCAN or HDBSCAN for non-spherical clusters
 
-Made by Amirabs7
 
