@@ -1,49 +1,153 @@
-# A-Clustering-Analysis-of-OKCupid-Profiles
-🧠 Project Overview
-This project explores a real-world dataset from OKCupid, a dating app that stands out for its user-matching algorithm based on optional personality and lifestyle questions. Using a combination of exploratory data analysis (EDA), dimensionality reduction (UMAP), and clustering (KMeans), we uncover insights about user profiles and behavioral patterns.
+💘 A Clustering Analysis of OKCupid Profiles
+This project analyzes user profiles from OKCupid, a dating platform known for its compatibility matching system. Using exploratory data analysis (EDA), UMAP for dimensionality reduction, and KMeans clustering, we uncover distinct dating archetypes and behavioral patterns.
 
-Dataset Source:
- https://www.kaggle.com/datasets/andrewmvd/okcupid-profiles/data
- 
+📅 Dataset Date & Source
+Dataset from Kaggle: OKCupid Profiles
+Published: 2018 | ~60,000 anonymized profiles
+
 🧼 Data Cleaning & Preparation
-Dropped columns with excessive missing values (e.g., religion, pets, essay answers).
+Removed columns with excessive missing data (e.g., pets, religion, essay* responses)
 
-Handled missing values in key lifestyle/demographic columns with "unknown" fillers.
+Filled missing values in lifestyle/demographic fields with "unknown"
 
-Encoded categorical variables for modeling (e.g., sex, orientation, education).
+Encoded categorical features (e.g., sex, orientation, education)
 
-Filtered income and height for reasonable ranges.
-
-
+Filtered outliers in income and height for realism
 
 📊 Exploratory Data Analysis (EDA)
-Distributions: Age, income, education, and body type distributions reveal majority trends.
+Demographics: Age, body type, education, income distributions
 
-Cross-Analysis: Showed relationships between drinking habits and income or orientation.
+Behavioral Cross-Insights:
 
-Encoding Example: Translated qualitative drink frequency to numerical scale for better analysis.
+Drinking habits by sexual orientation
+
+Median income across education levels
+
+Quantification: Mapped qualitative responses (e.g., "often", "rarely") to numerical values
+
+📁 Example Visuals:
+
+Age distribution per gender
+
+Income distribution
+
+Drinking frequency by sexual orientation
+
+Body type distribution
 
 📉 Dimensionality Reduction with UMAP
-UMAP projected multi-dimensional user data (age, income, height, encoded sex) into 2D for visualization:
+Used UMAP to compress multidimensional data (e.g., age, income, height, sex) to 2D
+
+Preserves local structure and cluster tendencies
+
+Enables intuitive visualization of profile clusters
+
+# 💘 A Clustering Analysis of OKCupid Profiles
+
+This project explores a rich dataset from **OKCupid**, a dating app known for its compatibility matching system based on optional personality and lifestyle questions. The data contains over **60,000 user profiles**, including demographics, lifestyle preferences, and free-text essays.
+
+We use **exploratory data analysis (EDA)**, **dimensionality reduction (UMAP)**, and **KMeans clustering** to identify distinct dating archetypes. The goal: uncover how people present themselves—and how they cluster—on a major online dating platform.
+
+📅 **Dataset Source**:  
+Kaggle – [`OKCupid Profiles`](https://www.kaggle.com/datasets/andrewmvd/okcupid-profiles/data)  
+🗓️ Year Collected: 2018  
+📦 Records: ~60,000 user profiles (structured + text data)
+
+---
+
+## 📁 Repository Structure
+
+├── Age distribution.png
+├── Age distribution per gender.png
+├── Body type distribution.png
+├── Drinking frequency by sexual orientation.png
+├── Education level distribution.png
+├── Income distribution.png
+├── Median income by education levels.png
+├── uncovering_dating_archetypes_clustering_okcupid_profiles_using_umap_and_kmeans.py
+└── README.md
 
 
-📦 Clustering with KMeans
-Clustered profiles into 5 user groups
+---
 
-Evaluated clustering with Silhouette Score
+## 🧼 Data Cleaning & Preparation
 
-Cluster 1 emerged as dominant: Younger (avg. age ~32) , Highly educated , Very low income
+- ❌ **Dropped** columns with excessive missing values: `religion`, `pets`, `essay*`
+- 🕳️ **Filled missing** lifestyle values with `"unknown"`
+- 🔤 **Encoded** categorical data: `sex`, `orientation`, `education`
+- 🧹 **Filtered** height and income values to remove unrealistic entries
 
+---
 
-📌 Ideas to Extend
-Add NLP sentiment analysis on essays if re-included
+## 📊 Exploratory Data Analysis (EDA)
 
-Predict matching compatibility using classification
+We explored user traits and behavioral patterns across multiple axes:
 
-Use UMAP+HDBSCAN for more organic clusters
+### ✅ **Key Observations**:
 
-Expand clustering with more psychological/lifestyle variables (e.g. sign, drugs, speaks)
+- **Most users are in their 20s and early 30s**
+- **Women report lower income than men on average**
+- **Higher education levels are associated with slightly higher income**, but many users with Master's degrees still report low income
+- **People who drink frequently are more likely to be straight and higher earners**
 
-Refine clustering with DBSCAN or HDBSCAN for non-spherical clusters
+### 📁 Visual Highlights:
+
+- `Drinking frequency by sexual orientation`
+- `Median income by education levels`
+- `Age distribution per gender`
+
+---
+
+## 📉 Dimensionality Reduction with UMAP
+
+We applied **UMAP** to reduce high-dimensional data (age, income, sex, height) into **2D space** for cluster visualization.
+
+- 🔍 Maintains local structure
+- 📊 Makes clusters visually interpretable
+- 🧩 Prepares data for clustering
+
+---
+
+## 📦 Clustering with KMeans
+
+We used **KMeans clustering** (k=5) on the UMAP-reduced data.
+
+### ⭐ **Key Findings from Clustering**:
+
+1. **Cluster 1**:  
+   - 🎓 **Highly educated**  
+   - 🧑‍🎓 **Young (avg. age ~32)**  
+   - 💸 **Very low income** → *Educated but under-earning*
+  
+2. **Cluster 2**:  
+   - 🧔‍♂️ **Older males**  
+   - 🥂 **Frequent drinkers**  
+   - 💵 **Mid to high income**
+
+3. **Cluster 3**:  
+   - 🚭 **Non-drinkers**  
+   - ✝️ **Often religious or conservative lifestyle markers**  
+   - 👥 **More gender balance**
+
+> Clusters capture **real behavioral archetypes** in the dating world—not just random groupings.
+
+---
+
+## 🔮 Future Extensions
+
+- 📝 **Add NLP**: Analyze user essays (sentiment, topic modeling)
+- ❤️ **Matching prediction**: Train model to predict compatibility
+- 🧠 **Better clustering**:
+  - Try **HDBSCAN** for organic shapes  
+  - Include more lifestyle traits (e.g., `drugs`, `sign`, `speaks`)
+- 🧪 Refine feature scaling + distance metrics
+
+---
+
+## 👩‍💻 Author
+
+**Amira Ben Salem**  
+📫 Email: besamira77@gmail.com  
+📍 Berlin, Germany  
 
 
