@@ -13,16 +13,16 @@ Kaggle – [`OKCupid Profiles`](https://www.kaggle.com/datasets/andrewmvd/okcupi
 
 ## 📁 Repository Structure
 
-├── Age distribution.png
-├── Age distribution per gender.png
-├── Body type distribution.png
-├── Drinking frequency by sexual orientation.png
-├── Education level distribution.png
-├── Income distribution.png
-├── Median income by education levels.png
-├── uncovering_dating_archetypes_clustering_okcupid_profiles_using_umap_and_kmeans.py
-└── README.md
-
+<pre> ```plaintext 
+   ├── Age distribution.png 
+   ├── Age distribution per gender.png 
+   ├── Body type distribution.png 
+   ├── Drinking frequency by sexual orientation.png 
+   ├── Education level distribution.png 
+   ├── Income distribution.png 
+   ├── Median income by education levels.png 
+   ├── uncovering_dating_archetypes_clustering_okcupid_profiles_using_umap_and_kmeans.py 
+   └── README.md ``` </pre>
 
 ---
 
