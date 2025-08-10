@@ -64,6 +64,21 @@ We applied **UMAP** to reduce high-dimensional data (age, income, sex, height) i
 
 ---
 
+## 📊 Key Visualizations
+
+### Body Type Distribution
+![Body Type Distribution](https://raw.githubusercontent.com/Amirabs7/A-Clustering-Analysis-of-OKCupid-Profiles/main/Body%20type%20distribution.png)
+
+### Drinking Frequency by Sexual Orientation
+![Drinking Frequency](https://raw.githubusercontent.com/Amirabs7/A-Clustering-Analysis-of-OKCupid-Profiles/main/Drinking%20frequency%20by%20sexual%20orientation.png)
+
+### Income Distribution
+![Income Distribution](https://raw.githubusercontent.com/Amirabs7/A-Clustering-Analysis-of-OKCupid-Profiles/main/Income%20distribution.png)
+
+---
+
+
+
 ## 📦 Clustering with KMeans
 
 We used **KMeans clustering** (k=5) on the UMAP-reduced data.
