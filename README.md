@@ -11,9 +11,15 @@ Kaggle – [`OKCupid Profiles`](https://www.kaggle.com/datasets/andrewmvd/okcupi
 
 ---
 
+## What this project shows
+- Text and clustering analysis using Python (pandas, scikit-learn, UMAP, KMeans).
+- Patterns in dating profiles and traits across demographics.
+- Reproducible project with clear visualizations and interactive insights
+
+---
+
 ## 📁 Repository Structure
 
-<pre> ```plaintext 
    ├── Age distribution.png 
    ├── Age distribution per gender.png 
    ├── Body type distribution.png 
