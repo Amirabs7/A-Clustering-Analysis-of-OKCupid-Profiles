@@ -121,10 +121,17 @@ We used **KMeans clustering** (k=5) on the UMAP-reduced data.
 
 ---
 
-## 👩‍💻 Author
+## 🛠️ How to Reproduce
+1. Clone this repository:
+git clone https://github.com/Amirabs7/OKCupid-Analysis.git
 
+---
+
+
+
+## 👩‍💻 Author
 **Amira Ben Salem**  
 📫 Email: besamira77@gmail.com  
 📍 Berlin, Germany  
 
-
+---
